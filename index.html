@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Input</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testes de Formulário</h1>
+    <h2>Meu Primeiro Formulário...</h2>
+    <form action="cadastro.php" autocomplete="off" method="post">
+        <!--
+            get sai na barra de endereço igual o google
+            post somente por dentro do navegador
+            get tem limite de 3000 bytes
+            post deve ser usado pra dados sensíveis, como senhas
+        -->
+    <fieldset>
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome"></p>
+        <p>
+            <label for="isobrenome">Sobrenome: </label><input type="text" name="sobrenome" id="isobrenome"></p>
+        <p>
+            <input type="submit" value="Enviar"></p>
+    </fieldset>
+    </form>
+
+
+
+    <h2>Teste de senha</h2>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <p>
+                <label for="iusu">Usuário: </label>
+                <input type="text" name="usu" id="iusu" required minlength="5" maxlength="30" size="20" placeholder="Nome do Usuário" autocomplete="name">
+            </p>
+            <p>
+                <label for="isenha">Senha: </label>
+                <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8" placeholder="Senha" autocomplete="current-password">
+            </p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+
+
+    <h2>Campos de Valor</h2>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <p>
+                <label for="ialuno">Nome Aluno: </label>
+                <input type="text" name="aluno" id="ialuno">
+            </p>
+            <p>
+                <label for="imes">Período Letivo: </label>
+                <input type="month" name="mes" id="imes" value="2022-07">
+            </p>
+            <p>
+                <label for="imedia">Média: </label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required value="5">
+            </p>
+            <p>
+                <label for="idia">Dia da Prova: </label>
+                <input type="date" name="dia" id="idia">
+            </p>
+            <p>
+                <label for="ihora">Hora da Prova: </label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            </p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+
+    <h2>Exemplo de campo e-mail</h2>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Exemplo de Legend no FieldSet</legend>
+            <p>
+                <label for="iemail">e-mail: </label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-[0-9]{4}$" placeholder="(xx)xxxxx-xxxx">
+            </p>
+            </p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
