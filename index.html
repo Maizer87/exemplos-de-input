@@ -97,7 +97,45 @@
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
             </p>
+        </fieldset>        
+    </form>
+
+    <h2>Exemplo de CheckBox e RadioButton</h2>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas" checked><label for="iesbas">Basquete</label><br>
+            <input type="checkbox" name="esvolei" id="iesvolei"><label for="iesvolei">Volei</label><br>
+            <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esgolf" id="iesgolf" checked><label for="iesgolf">Golfe</label>
         </fieldset>
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imasc" checked value="M"><label for="imasc">Masculino</label><!--mesmo name pra um desmarcar o outro-->
+            <input type="radio" name="sexo" id="ifem" value="F"><label for="ifem">Feminino</label>
+        </fieldset>
+        </p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <h2>Exemplo de Cor e Range</h2>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <input type="color" name="cor" id="icor" value="#00FF00"><label for="icor">Cor</label>
+        </p>
+        <p>
+            <input type="range" name="satisfaction" id="isatisfaction" min="1" max="5" value="2"><label for="isatisfaction">Satisfação</label>
+        </p>
+        <p>
+            <label for="ifoto">Foto:</label> <input type="file" name="foto" id="ifoto">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
     </form>
 </body>
 </html>
