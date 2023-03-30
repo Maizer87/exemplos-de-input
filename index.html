@@ -137,5 +137,88 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+
+    <h2>Exemplo de Select</h2>
+    <form action="cadastro.php" method="post" autocomplete="on">        
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <option value="" selected>Escolha Um Estado</option>
+                <optgroup label="Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="ES">Espírito Santo</option>
+                </optgroup>
+                <optgroup label="Centro-Oeste">
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="GO">Goiás</option>
+                    <option value="DF">Distrito Federal</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprofissao">Profissão: </label>
+            <input type="text" name="profissao" id="iprofissao" list="listaprofissoes">
+            <datalist id="listaprofissoes">
+                <option>Desenvolvedor</option>
+                <option>Médico</option>
+                <option>Professor</option>
+                <option>Contador</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imensagem">Mensagem: </label><br>
+            <textarea name="mensagem" id="imensagem" cols="50" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <h2>OutPut com um pouquinho de javascript</h2>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="ifirstnumber">Primeiro Número:</label>
+            <input type="number" name="firstnumber" id="ifirstnumber" required oninput="isum.innerHTML = Number(ifirstnumber.value) + Number(isecondnumber.value)">
+        </p>
+        <p>
+            <label for="isecondnumber">Segundo Número:</label>
+            <input type="number" name="secondnumber" id="isecondnumber" required oninput="isum.innerHTML = Number(ifirstnumber.value) + Number(isecondnumber.value)">
+        </p>
+        <p>
+            <label for="isum">Soma: </label>
+            <output name="sum" id="isum">0</output>
+        </p>
+        <p>
+            <label for="ibarr">Barrinha: </label>
+            <input type="range" name="barr" id="ibarr" oninput="ioutbarr.innerHTML = Number(ibarr.value)">
+            <output id="ioutbarr">5</output>
+        </p>
+
+
+
+        <p>
+            <label for="iBirthYear">Em que Ano Você Nasceu?</label>
+            <input type="number" name="BirthYear" id="iBirthYear" min="1900" max="2023" oninput="calcAge()">            
+        </p>
+        <p>
+            <label for="iAge">Você tem </label>
+            <output id="iAge">0</output>
+            <span> anos!</span>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <script>
+        function calcAge() {
+            let currentYear = new Date().getFullYear()
+            iAge.innerHTML = Number(currentYear) - Number(iBirthYear.value)
+        }
+    </script>
 </body>
 </html>
